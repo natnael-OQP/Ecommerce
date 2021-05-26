@@ -1,0 +1,12 @@
+@mixin flexy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-container{
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

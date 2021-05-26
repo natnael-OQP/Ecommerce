@@ -1,0 +1,20 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+@mixin flexy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.homepage{
+    background-color: #fff;
+    @include flexy();
+    padding: 1rem 2rem;
+}
+.menu-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
