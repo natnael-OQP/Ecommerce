@@ -7,7 +7,7 @@ import Homepage from './pages/homepage.component.jsx';
 function App() {
     return (
       <div>
-        {/* <Route exact path="/" component={Homepage} /> */}
+        <Route exact path="/" component={Homepage} />
       </div>
     )
 }
