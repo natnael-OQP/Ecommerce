@@ -1,17 +1,20 @@
 import React from 'react';
 import './style/menu-items.css';
+import {withRouter} from 'react-router-dom';
+const MenuItems = ({title,imageUrl,size,history,links}) => (
+    <div  className={`menu-items ${size}`}
+          onClick={() =>{
+            history.push(`${links}`) 
 
-const MenuItems = ({title,imageUrl,size}) => (
-    // style div background-image with reatc stayel  attributes wright value in camel case
-    <div  className={`menu-items ${size}`} > 
+           }} > 
         <div className="background-image" style={
-        {backgroundImage: `Url(${imageUrl})`}
-    } />
+            {backgroundImage: `Url(${imageUrl})`}
+        } />
         <div className="content">
             <h2 className="title">{title}</h2>
-            <span className="sub-title">Shop now</span>
+            <span className="sub-title">shop Now</span>
         </div>
     </div>
 )
 
-export default MenuItems;
+export default withRouter(MenuItems);
