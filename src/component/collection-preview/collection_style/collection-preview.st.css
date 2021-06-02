@@ -1,0 +1,26 @@
+.preview-component {
+  width: 90vw;
+  margin: 0px auto;
+}
+
+.preview-component .preview-title {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.preview-component .preview-items-container {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.884);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+/*# sourceMappingURL=collection-preview.st.css.map */

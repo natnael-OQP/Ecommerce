@@ -1,0 +1,16 @@
+.preview-component{
+    width: 90vw;
+    margin: 0px auto;
+    .preview-title{
+        padding: 1rem;
+        cursor: pointer;
+    }
+    .preview-items-container{
+        padding: 1rem;
+        background-color: rgba(255, 255, 255, 0.884);
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        flex-wrap: wrap;
+    }
+}
