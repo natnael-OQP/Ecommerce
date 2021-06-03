@@ -74,8 +74,8 @@
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .collection-item:hover .btn {
