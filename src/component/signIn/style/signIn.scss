@@ -1,0 +1,36 @@
+.signIn-container{
+    margin-top: 3rem;
+    width:40%;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    flex-direction:column;
+    padding-left: 4rem;
+    .sign-in-text{
+        padding-left: .5rem;
+        width: 70%;
+        margin-bottom: 1rem;
+        h2{
+            font-size: 1.7rem;
+            font-weight: bolder;
+            margin: .3rem 0;
+            font-family: "Nunito", sans-serif;
+            letter-spacing: .01rem;
+        }
+        span{
+            font-size: 1rem;
+            font-family: "Nunito", sans-serif;
+            letter-spacing: .01rem;
+            color: #1a1919d8;
+        }
+    }
+    .form{
+        width: 70%;
+    }
+    .input{
+        width: 100%;
+        border-bottom: 1px solid #000;
+        margin: 1.2rem 0;
+        display: flex;
+    }
+}

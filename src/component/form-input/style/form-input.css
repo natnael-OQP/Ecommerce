@@ -1,0 +1,20 @@
+.form-input {
+  border: none;
+  outline: none;
+  display: flex;
+  padding: 0.5rem 0;
+  width: 100%;
+  font-size: 1.1rem;
+  font-family: "Nunito", sans-serif;
+  color: #161616;
+  background-color: transparent;
+}
+.form-input ::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.288);
+}
+.form-input :-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.288);
+}
+.form-input ::placeholder {
+  color: rgba(0, 0, 0, 0.288);
+}/*# sourceMappingURL=form-input.css.map */

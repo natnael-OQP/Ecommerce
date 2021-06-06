@@ -1,58 +1,59 @@
 import React from 'react';
-import './style/signIn.css';
+import Btn from '../button/button.component';
+import FormInput from '../form-input/form-Input.component';
+import './style/signIn.css'
 
 class SignIn extends React.Component {
     constructor(props) {
         super(props);
-        this.state={
+        this.state = {
             email:'',
             password:''
-        };
+        }
     }
-    handleSubmit = (e) => {
+    handleSubmit=(e)=>{
         e.preventDefault();
-        this.setState({email:'',password:''})
+        this.setState({email:'', password:''});
     }
-    handleChange = (e)=>{
+    handelChange = (e)=>{
         const {name,value} = e.target;
-        this.setState({[name]:value});
+        this.setState({[name]:value})
     }
     render() {
-        return(
-            <div className="sign-in-wrapper">
-                <h2>I Allready have An Account</h2>
-                <span>Sign in Your Email and Password</span>
-                {/* form */}
-                <form onSubmit={this.handleSubmit} >
+        return (
+            <div className="signIn-container">
+               <div className="sign-in-text">
+                    <h2>I All ready have An Account</h2>
+                    <span>Sign in Your Email and Password</span>
+               </div>
+                <form className="form" onSubmit={this.handleSubmit} >
+                    {/* email */}
                     <div className="input">
-                        <label for="email" >email</label>
-                        <input
+                        <FormInput 
                             type="email" 
-                            name="email"  
+                            name="email" 
                             placeholder="Enter your email" 
-                            value={this.state.email} 
-                            onChange={this.handleChange}
-                            required 
+                            value={this.state.email}
+                            handelChange={this.handelChange}
+                            required
                         />
                     </div>
                     {/* password */}
                     <div className="input">
-                        <label for="password">Password</label>
-                        <input 
+                        <FormInput 
                             type="password" 
                             name="password" 
                             placeholder="Enter your password" 
                             value={this.state.password}
-                            onChange={this.handleChange}  
-                            required 
+                            onChange={this.handelChange}
+                            required
                         />
                     </div>
-                    <input type="submit" name="submit" />
+                    <Btn type="submit" name="submit" >Sign in</Btn>  
                 </form>
             </div>
         )
     }
 }
-
 
 export default SignIn;
