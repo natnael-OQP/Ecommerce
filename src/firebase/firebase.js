@@ -1,5 +1,6 @@
 import firebase from "firebase/app";
-
+import 'firebase/firestore';
+import 'firebase/auth'
 
 
 var config = {
@@ -9,5 +10,12 @@ var config = {
     storageBucket: "ecommerce-bf637.appspot.com",
     messagingSenderId: "476363704792",
     appId: "1:476363704792:web:6c5347ef4f7339fea60aad"
-  };
+};
 firebase.initializeApp(config)
+
+export const auth = firebase.auth();
+export const firestore = firebase.firestore();
+//popup window
+const provider = new firebase.auth.GoogleAuthProvider();
+provider.setCustomParameters({prompt: "select_data"});
+

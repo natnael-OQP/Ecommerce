@@ -1,5 +1,5 @@
 import React from 'react';
-import './style/collection-item.style.css';
+import './style/collection-item.style.css'
 
 const CollectionItems = ({name,imageUrl,price})=>(
     <div className="collection-item">
@@ -15,7 +15,8 @@ const CollectionItems = ({name,imageUrl,price})=>(
             <span className="price" >{`${price} birr`}</span>
         </div>
         {/* button */}
-        <button className="btn">ADD TO CART</button>
+        <button className="buttons"> ADD TO CART </button>
+        <button className="buttons"> Sign in with google </button>
     </div>
 )
 export default CollectionItems;

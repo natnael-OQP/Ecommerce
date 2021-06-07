@@ -38,7 +38,7 @@
             font-family: 'Nunito', sans-serif;
         }
     }
-    .btn{
+    .buttons{
         cursor: pointer;
         background-color: #e4811c;
         padding: .5rem 3.4rem;
@@ -51,7 +51,7 @@
         transform: translate(-50%);
         transition: all .3s ease-in-out;
     }
-    &:hover .btn {
+    &:hover .buttons {
         bottom:6px;
         opacity: 1;
     }

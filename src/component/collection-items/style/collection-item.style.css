@@ -39,7 +39,7 @@
   font-size: 1.1rem;
   font-family: "Nunito", sans-serif;
 }
-.collection-item .btn {
+.collection-item .buttons {
   cursor: pointer;
   background-color: #e4811c;
   padding: 0.5rem 3.4rem;
@@ -52,7 +52,7 @@
   transform: translate(-50%);
   transition: all 0.3s ease-in-out;
 }
-.collection-item:hover .btn {
+.collection-item:hover .buttons {
   bottom: 6px;
   opacity: 1;
 }/*# sourceMappingURL=collection-item.style.css.map */

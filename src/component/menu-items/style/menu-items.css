@@ -45,13 +45,13 @@
   letter-spacing: 0.06rem;
   font-family: "Pattaya", sans-serif;
 }
-.menu-items:hover {
+.menu-items .content .sub-title:hover {
   cursor: pointer;
 }
-.menu-items:hover .background-image {
+.menu-items .content .sub-title:hover .background-image {
   transform: scale(1.1);
   transition: transform 3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
 }
-.menu-items:hover .content {
+.menu-items .content .sub-title:hover .content {
   opacity: 1;
 }/*# sourceMappingURL=menu-items.css.map */
