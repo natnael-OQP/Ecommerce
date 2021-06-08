@@ -1,4 +1,5 @@
 import React from 'react';
+import { signInWithGoogle } from '../../firebase/firebase';
 import Btn from '../button/button.component';
 import FormInput from '../form-input/form-Input.component';
 import './style/signIn.css'
@@ -34,22 +35,25 @@ class SignIn extends React.Component {
                             name="email" 
                             placeholder="Enter your email" 
                             value={this.state.email}
-                            handelChange={this.handelChange}
                             required
+                            handelChange={this.handelChange}
                         />
                     </div>
                     {/* password */}
                     <div className="input">
                         <FormInput 
+                            required
                             type="password" 
                             name="password" 
                             placeholder="Enter your password" 
                             value={this.state.password}
                             onChange={this.handelChange}
-                            required
                         />
                     </div>
-                    <Btn type="submit" name="submit" >Sign in</Btn>  
+                    <div className="btn-container">
+                        <Btn type="submit" name="submit" >Sign in</Btn>  
+                        <Btn onClick={signInWithGoogle} googleauth type="button" name="submit" >SignIn with Google</Btn>    
+                    </div>  
                 </form>
             </div>
         )

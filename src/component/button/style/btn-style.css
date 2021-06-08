@@ -1,11 +1,11 @@
 .btn {
-  width: 150px;
+  width: 140px;
   height: 37px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #e4811c;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: bold;
   font-family: "Nunito", sans-serif;
   color: white;
@@ -21,4 +21,15 @@
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.btn.googleButton {
+  width: 170px;
+  font-size: 1rem;
+  font-weight: lighter;
+  background-color: #4285f4;
+  color: #fff;
+}
+.btn.googleButton:hover {
+  background-color: #357ae8;
+  color: #fff;
 }/*# sourceMappingURL=btn-style.css.map */

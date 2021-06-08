@@ -16,7 +16,6 @@ const CollectionItems = ({name,imageUrl,price})=>(
         </div>
         {/* button */}
         <button className="buttons"> ADD TO CART </button>
-        <button className="buttons"> Sign in with google </button>
     </div>
 )
 export default CollectionItems;
