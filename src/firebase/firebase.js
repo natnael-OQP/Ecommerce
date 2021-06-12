@@ -13,16 +13,24 @@ var config = {
 };
 firebase.initializeApp(config)
 
+export const createUserProfile = async  (userAuth,additionalData )=>{
+    if(!userAuth) return;
+    
+    const documentRef =  firestore.doc(`user/${userAuth.uid}`);
+    const snapshot = await documentRef.get();
+    if(!userAuth.exists){
+        const {email,displayName,uid} = userAuth;
+    
+    }
+}
+
 export const auth = firebase.auth();
-// note use yet
 export const firestore = firebase.firestore();
 
 // Google auth and Sign in with popup window
-
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({prompt: 'select_account'});
 
 export const signInWithGoogle =  () => auth.signInWithPopup(provider);
-
 
 export default firebase;

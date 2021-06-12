@@ -6,7 +6,7 @@ import Homepage from './pages/homepage.component.jsx';
 import shopPage from './pages/Shop/ShopPage.component.jsx'
 import Header from './component/header/header.component.jsx'
 import SignInOut from './pages/sign-in-out/sign-in-out.page.jsx'
-import { auth } from './firebase/firebase.js';
+import { auth, createUserProfile } from './firebase/firebase.js';
 
 
 class App extends React.Component {
@@ -16,13 +16,17 @@ class App extends React.Component {
       currentUser: null,
     }
   }
+
   unSubscribe = null;
+
   componentDidMount() {
-    this.unSubscribe = auth.onAuthStateChanged(user =>{
+    this.unSubscribe = auth.onAuthStateChanged(  (user) =>{
       this.setState({currentUser: user})
       console.log(user)
+      createUserProfile(user);
     })
   }
+  // when connection lost 
   componentWillUnmount() {
     this.unSubscribe();
   }
