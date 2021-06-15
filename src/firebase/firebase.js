@@ -13,20 +13,36 @@ var config = {
 };
 firebase.initializeApp(config)
 
-export const createUserProfile = async  (userAuth,additionalData )=>{
-    if(!userAuth) return;
-    
-    const documentRef =  firestore.doc(`user/${userAuth.uid}`);
-    const snapshot = await documentRef.get();
-    if(!userAuth.exists){
-        const {email,displayName,uid} = userAuth;
-    
+export const createUserProfile = async (userAuth,AdditionalData) =>{
+    // if there is no user exiting  ✔🍕
+    // if(!userAuth) return;
+    // documentReference  ✔🍕
+    const docRef = firestore.doc(`/user/${userAuth.uid}`);
+    // documentReference  return documentSnapshot object   ✔🍕
+    const snapshot = await docRef.get();
+    // if there is no data based on uid create a new data object  ✔🍕
+    if(!snapshot.exists){
+        const {displayName,email,photoURL} = userAuth;
+        const createdAt = new Date();
+        try 
+        {
+            docRef.set({
+                displayName,
+                email,
+                photoURL,
+                createdAt,
+                ...AdditionalData
+            })
+        } 
+        catch (error) {
+            console.error(error);
+        }
     }
-}
+    return docRef;
+}   
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
-
 // Google auth and Sign in with popup window
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({prompt: 'select_account'});

@@ -11,19 +11,23 @@ import { auth, createUserProfile } from './firebase/firebase.js';
 
 class App extends React.Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
-      currentUser: null,
+      currentUser: props.displayName,
+      email: props.email,
+      photoURL: props.photoURL
     }
   }
 
   unSubscribe = null;
 
   componentDidMount() {
-    this.unSubscribe = auth.onAuthStateChanged(  (user) =>{
-      this.setState({currentUser: user})
-      console.log(user)
-      createUserProfile(user);
+    this.unSubscribe = auth.onAuthStateChanged( async userAuth =>{
+      if(userAuth){
+        const docRef = await createUserProfile(userAuth);
+        console.log(docRef);
+      }
+
     })
   }
   // when connection lost 
@@ -34,7 +38,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header currentUser={this.state.currentUser} />
+        <Header currentUser={this.state.currentUser}  />
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route  path="/shop" component={shopPage} />
