@@ -26,6 +26,7 @@ export const createUserProfile = async (userAuth,AdditionalData) =>{
         const createdAt = new Date();
         try 
         {
+            // create document object in firestore ✔🍕
             docRef.set({
                 displayName,
                 email,

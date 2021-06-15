@@ -11,11 +11,9 @@ import { auth, createUserProfile } from './firebase/firebase.js';
 
 class App extends React.Component {
   constructor(props) {
-    super(props);
+    super();
     this.state = {
-      currentUser: props.displayName,
-      email: props.email,
-      photoURL: props.photoURL
+      current_user: null,
     }
   }
 
@@ -25,9 +23,19 @@ class App extends React.Component {
     this.unSubscribe = auth.onAuthStateChanged( async userAuth =>{
       if(userAuth){
         const docRef = await createUserProfile(userAuth);
-        console.log(docRef);
+        docRef.onSnapshot(snapshot =>{
+          this.setState({
+            current_user:{
+              id:snapshot.id,
+              ...snapshot.data(),
+            } 
+          },()=>{
+            console.log(this.state.current_user);
+          })
+        })
       }
-
+      this.setState({current_user:userAuth})
+      
     })
   }
   // when connection lost 
@@ -38,7 +46,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header currentUser={this.state.currentUser}  />
+        <Header currentUser={this.state.current_user}  />
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route  path="/shop" component={shopPage} />
