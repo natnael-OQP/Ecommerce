@@ -39,5 +39,29 @@
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.274);
 }
 .header-container .options .left {
-  margin-left: 3rem;
+  margin-left: 1rem;
+}
+.header-container .options .profile-pic {
+  width: 100px;
+}
+.header-container .options .profile-pic img {
+  width: 35px;
+  height: 35px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.header-container .options .profile-pic.auth-pic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header-container .options .profile-pic .name {
+  display: flex;
+  color: #c26a12ec;
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-style: italic;
 }/*# sourceMappingURL=header.style.css.map */

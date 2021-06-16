@@ -1,39 +1,40 @@
-.signIn-container {
-  min-width: 40%;
+.sign-up-container {
+  margin-top: 3rem;
+  min-width: 90%;
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
   flex-direction: column;
-  margin-bottom: 2rem;
+  padding-left: 1rem;
 }
-.signIn-container .sign-in-text {
+.sign-up-container .sign-up-text {
   padding-left: 0.5rem;
   width: 70%;
   margin-bottom: 1rem;
 }
-.signIn-container .sign-in-text h2 {
+.sign-up-container .sign-up-text h2 {
   font-size: 1.7rem;
   font-weight: bolder;
   margin: 0.3rem 0;
   font-family: "Nunito", sans-serif;
   letter-spacing: 0.01rem;
 }
-.signIn-container .sign-in-text span {
+.sign-up-container .sign-up-text span {
   font-size: 1rem;
   font-family: "Nunito", sans-serif;
   letter-spacing: 0.01rem;
   color: #1a1919d8;
 }
-.signIn-container .form {
+.sign-up-container .form {
   width: 90%;
 }
-.signIn-container .input {
+.sign-up-container .input {
   width: 100%;
   border-bottom: 1px solid #000;
   margin: 1.2rem 0;
   display: flex;
 }
-.signIn-container .btn-container {
+.sign-up-container .btn-container {
   display: flex;
   justify-content: space-between;
-}/*# sourceMappingURL=signIn.css.map */
+}/*# sourceMappingURL=sign-up.css.map */

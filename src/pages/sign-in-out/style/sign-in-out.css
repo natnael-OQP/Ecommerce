@@ -1,2 +1,12 @@
-
-/*# sourceMappingURL=sign-in-out.css.map *//*# sourceMappingURL=sign-in-out.css.map */
+.Sign-in-Out-page {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 1rem 1rem 2.2rem;
+}
+.Sign-in-Out-page .sign-up-option {
+  min-width: 37%;
+}/*# sourceMappingURL=sign-in-out.css.map */

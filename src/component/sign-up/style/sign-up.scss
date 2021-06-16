@@ -1,0 +1,40 @@
+.sign-up-container{
+    margin-top: 3rem;
+    min-width:90%;
+    display: flex;
+    align-items: flex-start;
+    justify-content:space-evenly;
+    flex-direction:column;
+    padding-left: 1rem;
+    .sign-up-text{
+        padding-left: .5rem;
+        width: 70%;
+        margin-bottom: 1rem;
+        h2{
+            font-size: 1.7rem;
+            font-weight: bolder;
+            margin: .3rem 0;
+            font-family: "Nunito", sans-serif;
+            letter-spacing: .01rem;
+        }
+        span{
+            font-size: 1rem;
+            font-family: "Nunito", sans-serif;
+            letter-spacing: .01rem;
+            color: #1a1919d8;
+        }
+    }
+    .form{
+        width: 90%;
+    }
+    .input{
+        width: 100%;
+        border-bottom: 1px solid #000;
+        margin: 1.2rem 0;
+        display: flex;
+    }
+    .btn-container{
+        display: flex;
+        justify-content: space-between;
+    }
+}

@@ -39,7 +39,31 @@
             }
         }
         .left{
-            margin-left: 3rem;
+            margin-left: 1rem;
+        }
+        .profile-pic{
+            width: 100px;
+            // height: 70px;
+            & img{
+                width: 35px;
+                height: 35px;
+                object-fit:cover;
+                border-radius:50%;
+            }
+            &.auth-pic{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content:center;
+            }
+            .name{
+                display: flex;
+                color: #c26a12ec;
+                font-size:.6rem;
+                font-weight:600;
+                text-transform:capitalize;
+                font-style: italic;
+            }
         }
     }
 }

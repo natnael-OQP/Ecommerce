@@ -15,12 +15,12 @@ firebase.initializeApp(config)
 
 export const createUserProfile = async (userAuth,AdditionalData) =>{
     // if there is no user exiting  ✔🍕
-    // if(!userAuth) return;
+    if(!userAuth) return;
     // documentReference  ✔🍕
     const docRef = firestore.doc(`/user/${userAuth.uid}`);
     // documentReference  return documentSnapshot object   ✔🍕
     const snapshot = await docRef.get();
-    // if there is no data based on uid create a new data object  ✔🍕
+    // if there is no data based on uid create a new data object in firestore  ✔🍕
     if(!snapshot.exists){
         const {displayName,email,photoURL} = userAuth;
         const createdAt = new Date();
