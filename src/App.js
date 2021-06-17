@@ -46,12 +46,12 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header currentUser={this.state.current_user} />{" "}
+        <Header currentUser={this.state.current_user} />
         <Switch>
-          <Route exact path="/" component={Homepage} />{" "}
-          <Route path="/shop" component={shopPage} />{" "}
-          <Route path="/sign" component={SignInOut} />{" "}
-        </Switch>{" "}
+          <Route exact path="/" component={Homepage} />
+          <Route path="/shop" component={shopPage} />
+          <Route path="/sign" component={SignInOut} />
+        </Switch>
       </div>
     );
   }
