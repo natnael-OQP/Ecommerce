@@ -1,6 +1,8 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import './style/header.style.css'
+// redux
+import {connect} from 'react-redux'
 
 import {ReactComponent as Logo} from '../../assets/4.3 crown.svg'
 import { auth } from "../../firebase/firebase";
@@ -40,5 +42,6 @@ const Header = ({currentUser})=>(
         </div>
     </div>
 )
+
 
 export default Header;

@@ -47,6 +47,7 @@ class SignUp extends React.Component{
             console.error(error);
         }
     }
+    
     handelChange = (e)=>{
         const {name,value} = e.target
         this.setState({[name]:value})
