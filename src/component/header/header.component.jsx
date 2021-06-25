@@ -1,10 +1,14 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import './style/header.style.css'
+// logo
 import {ReactComponent as Logo} from '../../assets/4.3 crown.svg'
+// firebase
 import { auth } from "../../firebase/firebase";
 // redux
 import { connect } from 'react-redux';
+// component 
+import Cart from '../cart/cart.component'
 
 // header
 const Header = ({ current_user })=>(
@@ -22,11 +26,11 @@ const Header = ({ current_user })=>(
             </Link>
             {
                 current_user? 
-                    <div className="option left" onClick={() => auth.signOut() } >Sign out</div>
+                <div className="option left" onClick={() => auth.signOut() } >Sign out</div>
                 :
-                    <Link className="option left" to="/sign" > Sign in </Link>
+                <Link className="option left" to="/sign" > Sign in </Link>
             }
-        
+            <Cart/>
             {
                 current_user? 
                     <div className="profile-pic auth-pic">

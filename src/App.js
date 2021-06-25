@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch,Redirect } from "react-router-dom";
 
 import Homepage from "./pages/homepage.component.jsx";
 import shopPage from "./pages/Shop/ShopPage.component.jsx";
@@ -43,13 +43,25 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route path="/shop" component={shopPage} />
-          <Route path="/sign" component={SignInOut} />
+          <Route  path="/sign"
+            render={() =>
+              this.props.current_user ? (
+                <Redirect to='/' />
+              ) : (
+                  <SignInOut />
+              )
+            }/>
         </Switch>
       </div>
     );
   }
 }
+
+const mapStateToProps = state => ({
+  current_user: state.user.current_user,
+})
+
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
 })
-export default connect(null,mapDispatchToProps)(App);
+export default connect(mapStateToProps,mapDispatchToProps)(App);
