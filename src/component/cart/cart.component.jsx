@@ -3,8 +3,8 @@ import './style/cart.css'
 import {ReactComponent as CartSvg} from '../../assets/shopping-bag.svg'
 const Cart = () => (
     <div className="cart-container">
-        <CartSvg />
-        <span>0</span>
+        <CartSvg className="bag-svg"/>
+        <span className="item-count" >0</span>
     </div>
 )
 

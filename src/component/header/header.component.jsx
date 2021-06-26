@@ -9,7 +9,8 @@ import { auth } from "../../firebase/firebase";
 import { connect } from 'react-redux';
 // component 
 import Cart from '../cart/cart.component'
-
+// cart-dropdown
+import CartDropdown from "../cart-dropdown/cart.dropdown";
 // header
 const Header = ({ current_user })=>(
     <div className="header-container">
@@ -44,6 +45,7 @@ const Header = ({ current_user })=>(
                 
             }
         </div>
+        <CartDropdown/>
     </div>
 )
 const mapStateToProps = state => ({
